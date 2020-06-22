@@ -13,6 +13,10 @@ module.exports = {
         library: 'Client'
     },
     devtool: 'source-map',
+    devServer: {
+        contentBase: path.join(__dirname, '/dist'),
+        compress: true,
+      },
     stats: 'verbose',
     module: {
         rules: [

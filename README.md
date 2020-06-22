@@ -1,6 +1,21 @@
-# Project Instructions
-
+#Project Introduction - What You Will Build
+We will build a web tool that allows users to run Natural Language Processing (NLP) on articles or blogs found on other websites. NLP is the ability of an application to understand the human language, written or oral.
 This repo is your starter code for the project. It is the same as the starter code we began with in lesson 2. Install and configure Webpack just as we did in the course. Feel free to refer to the course repo as you build this one, and remember to make frequent commits and to create and merge branches as necessary!
+
+#to run the project 
+there is two config files one is for development mode and the other is for production mode. the server is sunning on 8080 port
+
+ - To run the project in the development mode write 
+1. `npm run build-dev`
+2. `npm start`
+
+-  To run the project in the production mode write 
+1. `npm run build-prod`
+2. `npm start`
+# API
+I used Sentiment Analysis endpoint from aylien API that extracting sentiment from a piece of text. 
+
+# Project Instructions
 
 The goal of this project is to give you practice with:
 - Setting up Webpack
