@@ -14,6 +14,9 @@ there is two config files one is for development mode and the other is for produ
 2. `npm start`
 # API
 I used Sentiment Analysis endpoint from aylien API that extracting sentiment from a piece of text. 
+### after running the code you will should this result
+
+
 
 # Project Instructions
 
