@@ -14,7 +14,14 @@ there is two config files one is for development mode and the other is for produ
 2. `npm start`
 # API
 I used Sentiment Analysis endpoint from aylien API that extracting sentiment from a piece of text. 
-### after running the code you will should this result
+### so if you write the wrod strong you will git : 
+{
+  polarity: 'positive',
+  subjectivity: 'objective',
+  text: '"strong"',
+  polarity_confidence: 0.4002547860145569,
+  subjectivity_confidence: 0.9041702804256257
+}
 
 
 
