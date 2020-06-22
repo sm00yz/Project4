@@ -39,3 +39,6 @@ app.post('/test', function (req, res) {
     }
   });
 });
+app.get('/test', function(req, res) {
+  res.send(mockAPIResponse)
+})
