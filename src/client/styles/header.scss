@@ -1,5 +1,8 @@
-header {
-    display: flex;
-    justify-content: space-between;
+header h1{
     padding: 10px 40px;
+    background-color: red($color: rgb(248, 213, 213));
+}
+section div #result{
+    padding: 10px 40px;
+
 }
