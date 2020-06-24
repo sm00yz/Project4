@@ -7,7 +7,7 @@ function handleSubmit(event) {
     console.log("::: Form Submitted :::")
    
     const data = { text: formText };
-    fetch('/test', {
+    fetch('http://localhost:8080', {
         method: 'POST',
         body: JSON.stringify(data),
         headers: {"Content-Type": "application/json"}

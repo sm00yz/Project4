@@ -33,9 +33,9 @@ app.post('/test', function (req, res) {
     textapi.sentiment({
     'text': data
   }, function(error, response) {
-    if (error === null) {
+    if (error==null) {
       console.log(response);
-      res.send(response)
+       res.send(response);
     }
   });
 });
