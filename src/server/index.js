@@ -16,8 +16,8 @@ app.get('/', function (req, res) {
 })
 
 // designates what port the app will listen to for incoming requests
-app.listen(8080, function () {
-    console.log('Example app listening on port 8080!')
+app.listen(8081, function () {
+    console.log('Example app listening on port 8081!')
 })
 
 app.use(express.json());
@@ -26,17 +26,14 @@ var textapi = new AYLIENTextAPI({
   application_id: process.env.API_ID,
   application_key: process.env.API_KEY
 });
-console.log("before get ");
 app.post('/test', function (req, res) {
-    //console.log("hi " + 'request =' + JSON.stringify(req.body.text))
-    const data = JSON.stringify(req.body.text)
+   // const data = JSON.stringify(req.body.text)
     textapi.sentiment({
-    'text': data
+      'url': req.body.text
   }, function(error, response) {
-    if (error==null) {
       console.log(response);
        res.send(response);
-    }
+    
   });
 });
 app.get('/test', function(req, res) {

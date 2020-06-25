@@ -1,13 +1,18 @@
-function handleSubmit(event) {
-    event.preventDefault()
+import { checkForURL } from './URLChecker'
 
+function handleSubmit(event) {
+    event.preventDefault();
+     
     // check what text was put into the form field
-    let formText = document.getElementById('name').value
-    //Client.checkForName(formText)
+    let formText = document.getElementById('name').value;
+    var isValidURL=Client.checkForURL(formText);
+    console.log(isValidURL);
     console.log("::: Form Submitted :::")
    
-    const data = { text: formText };
-    fetch('http://localhost:8080', {
+   if(isValidURL){
+     
+     const data = { text: formText };
+    fetch('http://localhost:8081/test', {
         method: 'POST',
         body: JSON.stringify(data),
         headers: {"Content-Type": "application/json"}
@@ -19,6 +24,7 @@ function handleSubmit(event) {
                 `subjectivity_confidence: ${res.subjectivity_confidence}`;
         console.log(res);
     })
+}else console.log("Wrong input please enter a valid url");
 
     
 }
