@@ -3,8 +3,15 @@ dotenv.config();
 var path = require('path')
 const express = require('express')
 const mockAPIResponse = require('./mockAPI.js')
-
 const app = express()
+/* Dependencies */ // body-parser, cors
+const bodyParser = require('body-parser')
+const cors = require('cors');
+//Here we are configuring express to use body-parser as middle-ware.
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+// Cors for cross origin allowance
+app.use(cors());
 
 app.use(express.static('dist'))
 
